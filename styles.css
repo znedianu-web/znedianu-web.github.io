@@ -340,3 +340,10 @@ details[open] summary span { transform: rotate(90deg); }
 @media (max-width: 800px) { .intro-identity { flex-direction: column; align-items: flex-start; gap: 1rem; } .intro-portrait { order: -1; width: 5rem; height: 5rem; } }
 
 .about-portrait { width: 100%; height: auto; margin-top: 2rem; }
+
+/* Show complete header compositions without cropping. */
+.opening-grid { grid-template-columns: 1.65fr 1fr; grid-template-rows: 1.5fr 1fr; }
+.opening-image { background: transparent; }
+.opening-image img { object-fit: contain; }
+.opening-image:hover img { transform: none; }
+@media (max-width: 540px) { .opening-grid { height: auto; aspect-ratio: 1 / 1; grid-template-columns: 1.65fr 1fr; } }
