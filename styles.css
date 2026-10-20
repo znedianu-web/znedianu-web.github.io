@@ -328,3 +328,13 @@ details[open] summary span { transform: rotate(90deg); }
 @media(max-width:600px) { .services-grid { grid-template-columns: 1fr; } .services-enquiry { align-items: start; flex-direction: column; gap: .5rem; } }
 @media(max-width:900px) { .project { grid-template-columns: 1fr; } .project-cover { max-height: none; } .project-gallery { columns: 3; } }
 @media(max-width:540px) { .intro { gap: 2rem; } .intro-line { margin-top: 1.5rem; } .intro-location { font-size: .95rem; } .opening-grid { height: 60svh; } .project { padding: 1.5rem 0 2rem; } .project-gallery { columns: 2; } .featured .section-heading h2 { font-size: 2.8rem; } .bmx-video { grid-template-columns: 1fr; } .bmx-video video { max-width: 280px; margin:auto; } .video-options { grid-template-columns: 1fr; } }
+
+/* Personal portrait beside the opening name. */
+.intro-identity { display: flex; align-items: center; gap: clamp(.75rem, 2vw, 2rem); }
+.intro-portrait { width: clamp(4.5rem, 8vw, 8rem); height: clamp(4.5rem, 8vw, 8rem); flex-shrink: 0; border-radius: 50%; object-fit: cover; object-position: 56% 38%; }
+@media (min-width: 801px) and (max-width: 1200px) { .intro-identity { flex-wrap: wrap; } }
+
+@media (min-width: 801px) { .intro-identity { flex-direction: column; align-items: flex-start; gap: 1.2rem; } .intro-portrait { order: -1; width: 6rem; height: 6rem; } }
+
+.intro-copy { min-width: 0; }
+@media (max-width: 800px) { .intro-identity { flex-direction: column; align-items: flex-start; gap: 1rem; } .intro-portrait { order: -1; width: 5rem; height: 5rem; } }
